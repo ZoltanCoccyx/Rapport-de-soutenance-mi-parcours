@@ -47,22 +47,22 @@
 		composition associative pour laquelle il existe un élément neutre. 
 
 		Une \emph{représentation} d'un monoïde fini $M$ est la donnée d'un
-		 corps $\kbf$, d'un espace vectoriel de dimension finie $V$ et d'une
-		  structure de $\kbf M$-module sur $V$.
+		corps $\kbf$, d'un espace vectoriel de dimension finie $V$ et d'une
+		structure de $\kbf M$-module sur $V$.
 	\end{dftn}
 	
 	La théorie des représentations des monoïdes est a priori beaucoup plus
 	difficile que la théorie des représentations des groupes. En particulier, 
 	alors que toutes les représentations de groupes finis peuvent être 
-	décomposées en somme directe de \emph{représentations irréductibles} 
+	décomposées en sommes directes de \emph{représentations irréductibles} 
 	(c'est-à-dire engendrées par n'importe quel élément non nul en tant que 
 	$\kbf M$-modules), ce n'est pas le cas des représentations de monoïdes. 
 	On dit que l'algèbre $\kbf M$ du monoïde n'est pas \emph{semi-simple}. 
 	La \emph{matrice de Cartan} est, dans un sens, une statistique qui 
 	mesure le défaut de semi-simplicité de $\kbf M$.
 	
-	Comme dans le cas des groupes, le théorie des \emph{caractères} (le 
-	caractère d'une représentation $V$, noté $\chi_V$, étant définie comme 
+	Comme dans le cas des groupes, la théorie des \emph{caractères} (le 
+	caractère d'une représentation $V$, noté $\chi_V$, étant définit comme 
 	l'application qui à $m \in M$ associe la trace de la multiplication par 
 	$m$ vue comme endomorphisme de $V$), joue un rôle important dans l'étude 
 	des représentations des monoïdes.
@@ -118,7 +118,7 @@
 	
 	\subsection*{\'Eléments de théorie des monoïdes et de leurs représentations}
 	
-	Dans un monoïde où on n'a pas l'axiome d'inversibilité d'un groupe, la question de savoir si un élément est un multiple d'un autre devient non triviale. Comme les monoïdes considérés sont en général non commutatifs, la notion de multiple doit être déclinée : ainsi, deux éléments $m, m$ d'un monoïde $M$ sont en $\lc$-relation s'ils ont le même ensemble de multiples à gauche, en $\rc$-relation s'ils ont les mêmes multiples à droite et en $\jc$-relation pour les multiples des deux côtés. $\lc, \rc$ et $\jc$  auxquelles on ajoute la $\hc$-relation définie par $m\hc m' \Leftrightarrow m\rc m'$ et $m\lc m'$ sont les \emph{relations de Green}.
+	Dans un monoïde où on n'a pas l'axiome d'inversibilité d'un groupe, la question de savoir si un élément est un multiple d'un autre devient non triviale. Comme les monoïdes considérés sont en général non commutatifs, la notion de multiple doit être déclinée : ainsi, deux éléments $m, m$ d'un monoïde $M$ sont en $\lc$-relation s'ils ont le même ensemble de multiples à gauche, en $\rc$-relation s'ils ont les mêmes multiples à droite et en $\jc$-relation pour les multiples des deux côtés. $\lc, \rc$ et $\jc$, auxquelles on ajoute la $\hc$-relation définie par $m\hc m' \Leftrightarrow m\rc m'$ et $m\lc m'$ sont les \emph{relations de Green}.
 	
 	\begin{lined}
 		\begin{ex}[Relations de Green dans $T_3$]
@@ -151,7 +151,7 @@
 		\end{ex}
 	\end{lined}
 
-	Une conséquence du lemme de Green est que si la multiplication à gauche par un élément du monoïde stabilise une $\hc$-classe $H$ donnée, alors c'est en fait une permutation de $H$. L'ensemble des permutations de $H$ obtenu de cette façon est le \emph{groupe de \schu} à gauche de $H$, noté $\Gamma(H)$. De la même façon, on définit le groupe de \schu à droite $\Gamma'(H)$. Ce groupe encode, d'une certaine façon, une information redondante de sur la $\jc$-classe de $H$ : $\Gamma(H)$ et $\Gamma(H')$ sont isomorphes si $H, H'$ sont dans la même $\jc$-classe. On a la même chose pour $\Gamma'$ et de plus, pour tout $H$, $\Gamma(H)$ et $\Gamma'(H)$ sont anti-isomorphes. Ces (anti-)isomorphismes ne sont en général pas canoniques, mais sont faciles à calculer.
+	Une conséquence du lemme de Green est que si la multiplication à gauche par un élément du monoïde stabilise une $\hc$-classe $H$ donnée, alors c'est en fait une permutation de $H$. L'ensemble des permutations de $H$ obtenu de cette façon est le \emph{groupe de \schu} à gauche de $H$, noté $\Gamma(H)$. De la même façon, on définit le groupe de \schu à droite $\Gamma'(H)$. Ce groupe encode, d'une certaine façon, une information redondante sur la $\jc$-classe de $H$ : $\Gamma(H)$ et $\Gamma(H')$ sont isomorphes si $H, H'$ sont dans la même $\jc$-classe. On a la même chose pour $\Gamma'$ et de plus, pour tout $H$, $\Gamma(H)$ et $\Gamma'(H)$ sont anti-isomorphes. Ces (anti-)isomorphismes ne sont en général pas canoniques, mais sont faciles à calculer.
 	
 	\begin{lined}
 		\begin{ex}[$\jc$-classe de $1,1,2$ dans $T_3$]\label{ex:green}
@@ -175,7 +175,7 @@
 	
 	Utiliser la formule de Thiéry pour calculer la matrice de Cartan présente deux difficultés. 
 	\begin{enumerate}
-		\item La première difficulté vient du fait que le cardinal de nombreuses familles intéressantes de monoïdes croient très rapidement. Par exemple, le cardinal de $T_n$ vaut $n^n$. 
+		\item La première difficulté vient du fait que le cardinal de nombreuses familles intéressantes de monoïdes croit très rapidement. Par exemple, le cardinal de $T_n$ vaut $n^n$. 
 		Pour résoudre ce problème, nous avons mis au point un algorithme permettant de calculer efficacement le cardinal de l'ensemble $\fix_J(h, k) = \{j \in J \sep hjk=j\}$ pour une $\jc$-classe $J$ et des éléments quelconque du monoïde $M$.
 		\item Deuxièmement, calculer la table de caractères du monoïde est en soit une difficulté. Des résultats sont connus pour certaines classes de monoïdes \cite[Section 9.4]{steinberg2016representation}, mais la question de calculer la table de caractères d'un monoïde arbitraire est inexplorée dans un cas général.
 		Pour résoudre ce problème, nous avons démontré une formule sur les caractères des monoïdes qui permet de réutiliser les méthodes de comptages de points fixes précédemment développées pour calculer la table de caractère d'une façon largement (mais pas seulement) combinatoire.
@@ -199,7 +199,7 @@
 
 	On pourra noter qu'on peut tabuler la première étape pour pouvoir calculer les points fixes pour différentes paires $(h, k_i)$ on ne faisant le calcul qu'un fois pour $h$, par exemple. En itérant cet algorithme sur toutes les $\jc$-classes, on peut calculer les points fixes dans le monoïde en entier, ce qui permet de calculer la matrice $B$ de la définition $\ref{def:cartan}$. En restreignant les étapes 2 et 3 on peut, par exemple, calculer les points fixes dans une $\rc$ ou $\lc$-classe donnée.
 	
-	Un brève analyse la complexité de cet algorithme donne en notant $n_r$ et $n_l$ le nombre de $\rc$ et $\lc$-classes dans $\jc$, et $n_c$ le nombre de classe de conjugaisons de $G$ :
+	Un brève analyse la complexité de cet algorithme donne, en notant $n_r$ et $n_l$ le nombre de $\rc$ et $\lc$-classes dans $\jc$, et $n_c$ le nombre de classe de conjugaisons de $G$ :
 	\begin{itemize}
 		\item $n_r + n_l$ tests d'appartenance à une $\lc$ ou $\rc$-classe,
 		\item $O(n_r + n_l)$ calculs de classes de conjugaisons,
@@ -225,10 +225,10 @@
 	\end{prop}
 	
 	Cette relation implique en particulier que si on connaît (i) le caractère de $\kbf \lc(e)$ et (ii) celui de $\rad_{\kbf G_e}(\lc(e)) + N_e(\kbf \lc(e))$, et qu'on connaît (iii) la table de caractère de $G_e$, alors on connaît les lignes de la table de caractères de $M$ associée à $G_e$.
-	Le point (iii) relève de la théorie des représentations des groupes, et on considère ici que c'est une donnée du problème. Le point (i) peut-être obtenu efficacement par des méthodes de comptage de point fixe comme dans la précédemment. La difficulté réside dans (ii): le calcul du caractère de $\rad_{\kbf G_e}(\lc(e)) + N_e(\kbf \lc(e))$. Celui-ci n'a a priori pas de raison d'avoir une description combinatoire. Cette difficulté se décline de deux façon
+	Le point (iii) relève de la théorie des représentations des groupes, et on considère ici que c'est une donnée du problème. Le point (i) peut-être obtenu efficacement par des méthodes de comptage de points fixes comme dans la précédemment. La difficulté réside dans (ii): le calcul du caractère de $\rad_{\kbf G_e}(\lc(e)) + N_e(\kbf \lc(e))$. Celui-ci n'a a priori pas de raison d'avoir une description combinatoire. Cette difficulté se décline de deux façons :
 	
 	\begin{itemize}
-		\item Dans le cas où la caractéristique de $\kbf$ \emph{ne divise pas} $|G_e|$, cette somme se réduit à $N_e(\kbf \lc(e))$. En utilisant exploitant certains résultats sur la structure de Green de $\jc(e)$, on arrive à une description de cet espace par $|G_e|n_l$ équations à $|G_e|n_r$ inconnues. On peut ensuite en calculer une base puis le caractère.
+		\item Dans le cas où la caractéristique de $\kbf$ \emph{ne divise pas} $|G_e|$, cette somme se réduit à $N_e(\kbf \lc(e))$. En exploitant certains résultats sur la structure de Green de $\jc(e)$, on arrive à une description de cet espace par $|G_e|n_l$ équations à $|G_e|n_r$ inconnues. On peut ensuite en calculer une base puis le caractère.
 		\item Dans le cas où la caractéristique de $\kbf$ divise $|G_e|$ (cas modulaire), il faut en plus $\rad_{\kbf G_e}(\lc(e))$. Cela est essentiellement équivalent à calculer le radical de l'algèbre $\kbf G_e$. Malheureusement, ce problème, bien que largement étudié (voir par exemple \cite{karpilovsky1987jacobson}), reste peu compris et difficile. En particulier, dans le cas de $T_n$, ces groupes sont des groupes symétriques, pour lesquels on dispose de peu de technologie en dehors d'algorithmes généralistes en $O(|G|^3)$ 
 	\end{itemize}
 	
@@ -242,16 +242,16 @@
 	\begin{itemize}
 		\item Rendre plus efficace le calcul de l'opérateur $N_e$ : pour le moment, et même avec l'exploitation actuelle de la structure de Green, on est amené à résoudre une système linéaire de $\sim 10^6$ équations à $\sim 10^6$ inconnues dans le cas de $T_8$. Ces matrices sont très creuses et on peut envisager utiliser des méthodes de calculs adaptées en plus d'exploiter davantage les propriétés de la multiplication du monoïde.
 		\item Rendre plus efficace le calcul du radical de l'algèbre du groupe dans le cas modulaire : pour le moment on utilise un algorithme pour une algèbre quelconque de dimension finie et le remplacer par un algorithme adapté aux algèbres de groupes permettrait de mener les calculs plus loin.
-		\item Soumettre le code terminé comme package pour le système de calcul formel GAP.
+		\item Rendre disponible le code terminé pour le système de calcul formel GAP.
 	\end{itemize}
 
-	Dans la catégorie "mathématiques expérimentales", le travail à effectuer est plus difficile à identifier. Une fois les algorithmes finalement mis en place, le calculs de nombreux exemples pourrait permettre la mise à jour de motifs dans la matrice de Cartan que ce soit dans le cas modulaire ou non. On peut noter que le code traitant le cas non modulaire, qui est essentiellement achevé, a déjà permis de trouver une façon de calculer la matrice de Cartan de $T_n$ sur $\CC$ uniquement combinatoire, ne mettant en jeu que des tableaux d'Young. L'analyse de cette formule et de ses avatars en termes de fonction symétriques a pour le moment été laissée de côté, mais il est prévu d'y revenir.
+	Dans la catégorie "mathématiques expérimentales", le travail à effectuer est plus difficile à identifier. Une fois les algorithmes finalement mis en place, le calcul de nombreux exemples pourrait permettre la mise à jour de motifs dans la matrice de Cartan que ce soit dans le cas modulaire ou non. On peut noter que le code traitant le cas non modulaire, qui est essentiellement achevé, a déjà permis de trouver une façon de calculer la matrice de Cartan de $T_n$ sur $\CC$ uniquement combinatoire, ne mettant en jeu que des tableaux d'Young. L'analyse de cette formule et de ses avatars en termes de fonction symétriques a pour le moment été laissée de côté, mais il est prévu d'y revenir.
 	
 	Enfin, les travaux déjà effectués présentés plus haut devraient faire l'objet d'une publication actuellement en cours de rédaction.
 	
 		\section*{Travaux supplémentaires}
 	
-	Dans le cadre d'un projet de recherche secondaire sur les groupes de Coxeter, un abstract étendu \cite{Baba2020} a été soumis à la conférence FPSAC (Formal Power Series and Algebraic Combinatorics) qui est (pour l'instant) prévue pour la semaine du 5 au 9 juillet à l'université Bar-Ilan en Israël. Le papier a été accepté pour une session de poster et est à paraitre dans les comptes rendus du séminaire Lotharingien de Combinatoire 2021. On y annonce une preuve d'un cas particulier de la Conjecture 2 de \cite{dyer2016small}. Cet  abstract étendu a vocation à évoluer vers un article détaillé. 
+	Dans le cadre d'un projet de recherche secondaire sur les groupes de Coxeter, un abstract étendu \cite{Baba2020} a été soumis à la conférence FPSAC (Formal Power Series and Algebraic Combinatorics) qui est (pour l'instant) prévue pour la semaine du 5 au 9 juillet à l'université Bar-Ilan en Israël. Le papier a été accepté pour une session de poster et est à paraitre dans les comptes rendus du Séminaire Lotharingien de Combinatoire 2021. On y annonce une preuve d'un cas particulier de la Conjecture 2 de \cite{dyer2016small}. Cet  abstract étendu a vocation à évoluer vers un article détaillé. 
 	
 	Ce travail de recherche trouve deux continuations naturelles : premièrement, il s'agirait d'appliquer ce résultat partiel comme lemme pour attaquer le cas général. Deuxièmement, un groupe de travail a été mis en place pour travailler sur la conjecture et des objets apparentés et en particulier sur la recherche d'algorithmes permettant de calculer et de générer combinatoirement ces objets. Ce groupe de travail est constitué en collaboration avec, en particulier, Nathan Chapelier-Laget du LaCIM à Montréal. Les perspectives de recherche sur ce projet secondaire s'ajoutent à celles précédemment évoquées concernant le sujet de thèse lui-même.
 	
